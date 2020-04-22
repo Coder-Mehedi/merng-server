@@ -11,6 +11,8 @@ const server = new ApolloServer({
 	typeDefs,
 	resolvers,
 	context: ({ req }) => ({ req, pubsub }),
+	playground: true,
+	introspection: true
 });
 
 const PORT = process.env.PORT || 5000;
